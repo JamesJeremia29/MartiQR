@@ -21,6 +21,8 @@
 		24AC80992A60FDB6002C277D /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80982A60FDB6002C277D /* userViewModel.swift */; };
 		24AC809B2A60FE4A002C277D /* userDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC809A2A60FE4A002C277D /* userDataModel.swift */; };
 		24AC809D2A61007F002C277D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AC809C2A61007F002C277D /* GoogleService-Info.plist */; };
+		24AC809F2A61A3D2002C277D /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC809E2A61A3D2002C277D /* PassViewController.swift */; };
+		24AC80A12A61A43C002C277D /* MRTPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80A02A61A43C002C277D /* MRTPassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		24AC80982A60FDB6002C277D /* userViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
 		24AC809A2A60FE4A002C277D /* userDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataModel.swift; sourceTree = "<group>"; };
 		24AC809C2A61007F002C277D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24AC809E2A61A3D2002C277D /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
+		24AC80A02A61A43C002C277D /* MRTPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTPassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				24AC807A2A5FB06B002C277D /* Preview Content */,
 				24AC80982A60FDB6002C277D /* userViewModel.swift */,
 				24AC809A2A60FE4A002C277D /* userDataModel.swift */,
+				24AC809E2A61A3D2002C277D /* PassViewController.swift */,
+				24AC80A02A61A43C002C277D /* MRTPassView.swift */,
 			);
 			path = MartiQR;
 			sourceTree = "<group>";
@@ -179,8 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AC809B2A60FE4A002C277D /* userDataModel.swift in Sources */,
+				24AC80A12A61A43C002C277D /* MRTPassView.swift in Sources */,
 				24AC80992A60FDB6002C277D /* userViewModel.swift in Sources */,
 				24AC80772A5FB06A002C277D /* ContentView.swift in Sources */,
+				24AC809F2A61A3D2002C277D /* PassViewController.swift in Sources */,
 				24AC80752A5FB06A002C277D /* MartiQRApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

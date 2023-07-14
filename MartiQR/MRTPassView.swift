@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MRTPassView: View {
+    
+    @ObservedObject private var viewModel = UserViewModel()
+    
     var body: some View {
         VStack{
             Button(action: {
@@ -15,6 +18,12 @@ struct MRTPassView: View {
             }) {
                 Text("Open Pass")
             }
+            Text(viewModel.tapIn)
+            Text(viewModel.tapOut)
+        }
+        .padding()
+        .task {
+            self.viewModel.fetchData()
         }
     }
     func showPassbook() {

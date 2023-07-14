@@ -10,20 +10,13 @@ import UIKit
 import PassKit
 
 struct ContentView: View {
-    @ObservedObject private var viewModel = UserViewModel()
+
     
     var body: some View {
         VStack {
             MRTPassView()
-            Text(viewModel.tapIn)
-            Text(viewModel.tapOut)
-
         }
         .padding()
-        .task {
-            self.viewModel.fetchData()
-        }
-
     }
 
 

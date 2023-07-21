@@ -9,86 +9,147 @@ import SwiftUI
 import CoreImage
 import CoreImage.CIFilterBuiltins
 import CommonCrypto
+import FirebaseFirestore
+
 
 struct MRTPassView: View {
     
-    @State private var name = "Anonymous"
-    @State private var email = "test@test.com"
-    @State private var hash: String = "5add98b6f9d22f5c343d74ca7cef000be42e6f6ce4c0a0226a49661a5dd8659a"
     
-    let alphabet = "abcdefghijklmnopqrst"
+    @AppStorage("hashId") var hashId: String = ""
+    @AppStorage("firstName") var firstName: String = ""
+    @AppStorage("lastName") var lastName: String = ""
     
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
+    private var db = Firestore.firestore()
     
-    @ObservedObject private var viewModel = UserViewModel()
+    @EnvironmentObject private var viewModel: UserViewModel
     
     var body: some View {
-        VStack{
-            Button("Generate Hash"){
-                hash = generateSHA256Hash(from: "\(alphabet.randomElement())")
+        VStack(){
+            
+            Text("MartiPass")
+                .padding(.leading, 30)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.system(.title, weight: .semibold))
+            ZStack {
+                Rectangle()
+                    .stroke(Color.black, lineWidth: 4)
+                    .cornerRadius(5)
+                
+                Image(uiImage: generateQRCode(from: "\(hashId)"))
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.all, 10)
+            }
+            .frame(width: 300, height: 300)
+            .padding(.all)
+            
+            HStack{
+                Image(systemName: "person.fill")
+                Text("\(firstName) \(lastName)")
+                //                Text("James Jeremia")
+            }.padding(.all)
+                .padding(.bottom, 20)
+            
+            //            Text(viewModel.tapIn).font(.system(size: 14))
+            //                .foregroundColor(.black)
+            //                .padding(.all,5)
+            //                .background(Color.green)
+            //            Text(viewModel.tapOut).font(.system(size: 14))                .foregroundColor(.black)
+            //                .padding(.all,5)
+            //                .background(Color.red)
+            //
+            
+            AddToWalletButton()
+            
+            
+            Text("Add MartiPass to Apple Wallet to show your QR Code on Apple Watch")
+                .font(.system(size: 10))
+                .foregroundColor(Color("DisabledText"))
+                .frame(width: 200, alignment: .center)
+                .multilineTextAlignment(.center)
+                .padding(.all)
+            
+        }
+        .onAppear{
+            if hashId.isEmpty {
+                if let savedHashId = UserDefaults.standard.string(forKey: "hashId") {
+                    hashId = savedHashId
+                } else {
+                    hashId = generateHashFromName(firstName: firstName, lastName: lastName)
+                    UserDefaults.standard.set(hashId, forKey: "hashId")
+                }
             }
             
-            Image(uiImage: generateQRCode(from: "\(hash)"))
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
-            Button(action: {
-                showPassbook()
-            }) {
-                Text("Open Pass")
-            }
-            Text(viewModel.tapIn)
-            Text(viewModel.tapOut)
         }
         .padding()
-        .task {
+        .onAppear {
             self.viewModel.fetchData()
-        }
-    }
-    func showPassbook() {
-        guard let passFileURL = Bundle.main.url(forResource: "Generic", withExtension: "pkpass") else {
-            return
-        }
-        
-        DispatchQueue.main.async {
-            let passViewController = PassViewController(fileURL: passFileURL)
-            let hostingController = UIHostingController(rootView: passViewController)
-            
-            UIApplication.shared.windows.first?.rootViewController?.present(hostingController, animated: true, completion: nil)
+            if !hashId.isEmpty {
+                let documentRef = db.collection("users").document(hashId)
+                documentRef.getDocument { (document, error) in
+                    if let document = document, !document.exists {
+                        documentRef.setData([
+                            "tapIn": "",
+                            "tapOut": ""
+                        ]) { error in
+                            if let error = error {
+                                print("Error writing document: \(error)")
+                            } else {
+                                print("Document successfully written!")
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
-    func generateQRCode(from string:String) -> UIImage{
-        print(hash)
-//        convert string data into a data object
-        filter.message = Data(string.utf8)
-        if let outputImage = filter.outputImage{
-            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent){
-                return UIImage(cgImage: cgimg)
+    
+    func generateQRCode(from string: String) -> UIImage {
+        let data = string.data(using: .utf8)!
+        
+        // Increase the size of the generated CIImage
+        filter.setValue(data, forKey: "inputMessage")
+        filter.setValue("H", forKey: "inputCorrectionLevel")
+        let transformedImage = filter.outputImage?.transformed(by: CGAffineTransform(scaleX: 10, y: 10))
+        
+        if let outputImage = transformedImage {
+            let cgImage = context.createCGImage(outputImage, from: outputImage.extent)
+            if let cgimg = cgImage {
+                // Adjust the scaling factor for the UIImage
+                let scale = UIScreen.main.scale
+                let uiImage = UIImage(cgImage: cgimg, scale: scale, orientation: .up)
+                return uiImage
             }
         }
+        
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
     
     func generateSHA256Hash(from text: String) -> String {
         guard let data = text.data(using: .utf8) else { return "" }
         
-        var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+        var hashId = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
         
         _ = data.withUnsafeBytes { buffer in
-            CC_SHA256(buffer.baseAddress, CC_LONG(data.count), &hash)
+            CC_SHA256(buffer.baseAddress, CC_LONG(data.count), &hashId)
         }
         
-        let hashData = Data(bytes: hash)
+        let hashData = Data(bytes: hashId)
         let hashString = hashData.map { String(format: "%02hhx", $0) }.joined()
         
         return hashString
+    }
+    func generateHashFromName(firstName: String, lastName: String) -> String {
+        let combinedString = "\(firstName) \(lastName)"
+        return generateSHA256Hash(from: combinedString)
     }
 }
 
 struct MRTPassView_Previews: PreviewProvider {
     static var previews: some View {
-        MRTPassView()
+        MRTPassView().environmentObject(UserViewModel())
     }
 }

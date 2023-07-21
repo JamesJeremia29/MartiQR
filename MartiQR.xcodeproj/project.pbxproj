@@ -11,7 +11,6 @@
 		24AC80772A5FB06A002C277D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80762A5FB06A002C277D /* ContentView.swift */; };
 		24AC80792A5FB06B002C277D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AC80782A5FB06B002C277D /* Assets.xcassets */; };
 		24AC807C2A5FB06B002C277D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AC807B2A5FB06B002C277D /* Preview Assets.xcassets */; };
-		24AC80872A6060D0002C277D /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = 24AC80822A605D46002C277D /* Generic.pkpass */; };
 		24AC808D2A60FA9C002C277D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 24AC808C2A60FA9C002C277D /* FirebaseAnalytics */; };
 		24AC808F2A60FA9C002C277D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 24AC808E2A60FA9C002C277D /* FirebaseAuth */; };
 		24AC80912A60FA9C002C277D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 24AC80902A60FA9C002C277D /* FirebaseDatabase */; };
@@ -23,6 +22,30 @@
 		24AC809D2A61007F002C277D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24AC809C2A61007F002C277D /* GoogleService-Info.plist */; };
 		24AC809F2A61A3D2002C277D /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC809E2A61A3D2002C277D /* PassViewController.swift */; };
 		24AC80A12A61A43C002C277D /* MRTPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80A02A61A43C002C277D /* MRTPassView.swift */; };
+		24AC80A42A62A65C002C277D /* SignInAppleIdButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80A32A62A65C002C277D /* SignInAppleIdButton.swift */; };
+		24AC80C92A68E31A002C277D /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = 24AC80C82A68E31A002C277D /* Generic.pkpass */; };
+		24E7DDD42A6A1D3E00FC4842 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDD32A6A1D3E00FC4842 /* HeaderView.swift */; };
+		24E7DDD62A6A1EA600FC4842 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDD52A6A1EA600FC4842 /* ExploreView.swift */; };
+		24E7DDDB2A6A1F4700FC4842 /* AttractionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDDA2A6A1F4700FC4842 /* AttractionDetailView.swift */; };
+		24E7DDDD2A6A1F7200FC4842 /* AttractionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDDC2A6A1F7200FC4842 /* AttractionScrollView.swift */; };
+		24E7DDDF2A6A1F9B00FC4842 /* AttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDDE2A6A1F9B00FC4842 /* AttractionView.swift */; };
+		24E7DDE22A6A1FE900FC4842 /* ButtonMenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDE12A6A1FE900FC4842 /* ButtonMenuComponent.swift */; };
+		24E7DDE42A6A200A00FC4842 /* MenuDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDE32A6A200A00FC4842 /* MenuDetailedView.swift */; };
+		24E7DDE62A6A202400FC4842 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDE52A6A202400FC4842 /* MenuView.swift */; };
+		24E7DDE92A6A206300FC4842 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDE82A6A206300FC4842 /* NewsDetailView.swift */; };
+		24E7DDEB2A6A208100FC4842 /* NewsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDEA2A6A208100FC4842 /* NewsScrollView.swift */; };
+		24E7DDED2A6A209100FC4842 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDEC2A6A209100FC4842 /* NewsView.swift */; };
+		24E7DDF02A6A20E400FC4842 /* PartnerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDEF2A6A20E400FC4842 /* PartnerDetailView.swift */; };
+		24E7DDF22A6A20FC00FC4842 /* PartnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDF12A6A20FC00FC4842 /* PartnerCardView.swift */; };
+		24E7DDF42A6A212100FC4842 /* PartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDF32A6A212100FC4842 /* PartnerView.swift */; };
+		24E7DDF62A6A214600FC4842 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDF52A6A214600FC4842 /* Constants.swift */; };
+		24E7DDF92A6A220A00FC4842 /* PromoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDF82A6A220A00FC4842 /* PromoScrollView.swift */; };
+		24E7DDFB2A6A222000FC4842 /* PromoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDFA2A6A222000FC4842 /* PromoDetailView.swift */; };
+		24E7DDFD2A6A223300FC4842 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDFC2A6A223300FC4842 /* PromoView.swift */; };
+		24E7DE002A6A225A00FC4842 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DDFF2A6A225A00FC4842 /* ScheduleView.swift */; };
+		24E7DE022A6A227200FC4842 /* ScheduleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE012A6A227200FC4842 /* ScheduleCardView.swift */; };
+		24E7DE042A6A29BF00FC4842 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE032A6A29BF00FC4842 /* BannerView.swift */; };
+		24E7DE062A6A2D2300FC4842 /* AddToWalletButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE052A6A2D2300FC4842 /* AddToWalletButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,14 +54,36 @@
 		24AC80762A5FB06A002C277D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24AC80782A5FB06B002C277D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AC807B2A5FB06B002C277D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		24AC80822A605D46002C277D /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; name = Generic.pkpass; path = MartiQR/Generic.pkpass; sourceTree = SOURCE_ROOT; };
-		24AC80842A605D93002C277D /* Generic.pass */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Generic.pass; sourceTree = "<group>"; };
-		24AC80882A60F421002C277D /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic.pkpass; sourceTree = "<group>"; };
 		24AC80982A60FDB6002C277D /* userViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
 		24AC809A2A60FE4A002C277D /* userDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataModel.swift; sourceTree = "<group>"; };
 		24AC809C2A61007F002C277D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24AC809E2A61A3D2002C277D /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
 		24AC80A02A61A43C002C277D /* MRTPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTPassView.swift; sourceTree = "<group>"; };
+		24AC80A22A62A2BC002C277D /* MartiQR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MartiQR.entitlements; sourceTree = "<group>"; };
+		24AC80A32A62A65C002C277D /* SignInAppleIdButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleIdButton.swift; sourceTree = "<group>"; };
+		24AC80C82A68E31A002C277D /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; name = Generic.pkpass; path = ../../../Generic.pkpass; sourceTree = "<group>"; };
+		24E7DDD32A6A1D3E00FC4842 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		24E7DDD52A6A1EA600FC4842 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		24E7DDDA2A6A1F4700FC4842 /* AttractionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailView.swift; sourceTree = "<group>"; };
+		24E7DDDC2A6A1F7200FC4842 /* AttractionScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionScrollView.swift; sourceTree = "<group>"; };
+		24E7DDDE2A6A1F9B00FC4842 /* AttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionView.swift; sourceTree = "<group>"; };
+		24E7DDE12A6A1FE900FC4842 /* ButtonMenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMenuComponent.swift; sourceTree = "<group>"; };
+		24E7DDE32A6A200A00FC4842 /* MenuDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailedView.swift; sourceTree = "<group>"; };
+		24E7DDE52A6A202400FC4842 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		24E7DDE82A6A206300FC4842 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		24E7DDEA2A6A208100FC4842 /* NewsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScrollView.swift; sourceTree = "<group>"; };
+		24E7DDEC2A6A209100FC4842 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		24E7DDEF2A6A20E400FC4842 /* PartnerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerDetailView.swift; sourceTree = "<group>"; };
+		24E7DDF12A6A20FC00FC4842 /* PartnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerCardView.swift; sourceTree = "<group>"; };
+		24E7DDF32A6A212100FC4842 /* PartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerView.swift; sourceTree = "<group>"; };
+		24E7DDF52A6A214600FC4842 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		24E7DDF82A6A220A00FC4842 /* PromoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoScrollView.swift; sourceTree = "<group>"; };
+		24E7DDFA2A6A222000FC4842 /* PromoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDetailView.swift; sourceTree = "<group>"; };
+		24E7DDFC2A6A223300FC4842 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
+		24E7DDFF2A6A225A00FC4842 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		24E7DE012A6A227200FC4842 /* ScheduleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCardView.swift; sourceTree = "<group>"; };
+		24E7DE032A6A29BF00FC4842 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		24E7DE052A6A2D2300FC4842 /* AddToWalletButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToWalletButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,18 +122,28 @@
 		24AC80732A5FB06A002C277D /* MartiQR */ = {
 			isa = PBXGroup;
 			children = (
+				24E7DDFE2A6A224600FC4842 /* ScheduleComponent */,
+				24E7DDF72A6A21E700FC4842 /* PromoComponent */,
+				24E7DDEE2A6A20B200FC4842 /* PartnerComponent */,
+				24E7DDE72A6A203B00FC4842 /* NewsComponent */,
+				24E7DDE02A6A1FBA00FC4842 /* MenuComponent */,
+				24E7DDD92A6A1F1B00FC4842 /* AttractionComponent */,
+				24E7DDD52A6A1EA600FC4842 /* ExploreView.swift */,
+				24E7DE032A6A29BF00FC4842 /* BannerView.swift */,
+				24E7DDD32A6A1D3E00FC4842 /* HeaderView.swift */,
+				24AC80C82A68E31A002C277D /* Generic.pkpass */,
+				24AC80A22A62A2BC002C277D /* MartiQR.entitlements */,
 				24AC809C2A61007F002C277D /* GoogleService-Info.plist */,
-				24AC80882A60F421002C277D /* Generic.pkpass */,
 				24AC80742A5FB06A002C277D /* MartiQRApp.swift */,
 				24AC80762A5FB06A002C277D /* ContentView.swift */,
 				24AC80782A5FB06B002C277D /* Assets.xcassets */,
-				24AC80822A605D46002C277D /* Generic.pkpass */,
-				24AC80842A605D93002C277D /* Generic.pass */,
 				24AC807A2A5FB06B002C277D /* Preview Content */,
 				24AC80982A60FDB6002C277D /* userViewModel.swift */,
 				24AC809A2A60FE4A002C277D /* userDataModel.swift */,
 				24AC809E2A61A3D2002C277D /* PassViewController.swift */,
 				24AC80A02A61A43C002C277D /* MRTPassView.swift */,
+				24AC80A32A62A65C002C277D /* SignInAppleIdButton.swift */,
+				24E7DE052A6A2D2300FC4842 /* AddToWalletButton.swift */,
 			);
 			path = MartiQR;
 			sourceTree = "<group>";
@@ -99,6 +154,66 @@
 				24AC807B2A5FB06B002C277D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24E7DDD92A6A1F1B00FC4842 /* AttractionComponent */ = {
+			isa = PBXGroup;
+			children = (
+				24E7DDDA2A6A1F4700FC4842 /* AttractionDetailView.swift */,
+				24E7DDDC2A6A1F7200FC4842 /* AttractionScrollView.swift */,
+				24E7DDDE2A6A1F9B00FC4842 /* AttractionView.swift */,
+			);
+			path = AttractionComponent;
+			sourceTree = "<group>";
+		};
+		24E7DDE02A6A1FBA00FC4842 /* MenuComponent */ = {
+			isa = PBXGroup;
+			children = (
+				24E7DDE12A6A1FE900FC4842 /* ButtonMenuComponent.swift */,
+				24E7DDE32A6A200A00FC4842 /* MenuDetailedView.swift */,
+				24E7DDE52A6A202400FC4842 /* MenuView.swift */,
+			);
+			path = MenuComponent;
+			sourceTree = "<group>";
+		};
+		24E7DDE72A6A203B00FC4842 /* NewsComponent */ = {
+			isa = PBXGroup;
+			children = (
+				24E7DDE82A6A206300FC4842 /* NewsDetailView.swift */,
+				24E7DDEA2A6A208100FC4842 /* NewsScrollView.swift */,
+				24E7DDEC2A6A209100FC4842 /* NewsView.swift */,
+			);
+			path = NewsComponent;
+			sourceTree = "<group>";
+		};
+		24E7DDEE2A6A20B200FC4842 /* PartnerComponent */ = {
+			isa = PBXGroup;
+			children = (
+				24E7DDEF2A6A20E400FC4842 /* PartnerDetailView.swift */,
+				24E7DDF12A6A20FC00FC4842 /* PartnerCardView.swift */,
+				24E7DDF32A6A212100FC4842 /* PartnerView.swift */,
+				24E7DDF52A6A214600FC4842 /* Constants.swift */,
+			);
+			path = PartnerComponent;
+			sourceTree = "<group>";
+		};
+		24E7DDF72A6A21E700FC4842 /* PromoComponent */ = {
+			isa = PBXGroup;
+			children = (
+				24E7DDF82A6A220A00FC4842 /* PromoScrollView.swift */,
+				24E7DDFA2A6A222000FC4842 /* PromoDetailView.swift */,
+				24E7DDFC2A6A223300FC4842 /* PromoView.swift */,
+			);
+			path = PromoComponent;
+			sourceTree = "<group>";
+		};
+		24E7DDFE2A6A224600FC4842 /* ScheduleComponent */ = {
+			isa = PBXGroup;
+			children = (
+				24E7DDFF2A6A225A00FC4842 /* ScheduleView.swift */,
+				24E7DE012A6A227200FC4842 /* ScheduleCardView.swift */,
+			);
+			path = ScheduleComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +285,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AC80872A6060D0002C277D /* Generic.pkpass in Resources */,
 				24AC809D2A61007F002C277D /* GoogleService-Info.plist in Resources */,
 				24AC807C2A5FB06B002C277D /* Preview Assets.xcassets in Resources */,
+				24AC80C92A68E31A002C277D /* Generic.pkpass in Resources */,
 				24AC80792A5FB06B002C277D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,12 +299,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E7DE042A6A29BF00FC4842 /* BannerView.swift in Sources */,
 				24AC809B2A60FE4A002C277D /* userDataModel.swift in Sources */,
+				24E7DDF62A6A214600FC4842 /* Constants.swift in Sources */,
+				24E7DE062A6A2D2300FC4842 /* AddToWalletButton.swift in Sources */,
+				24E7DDF92A6A220A00FC4842 /* PromoScrollView.swift in Sources */,
+				24E7DDFB2A6A222000FC4842 /* PromoDetailView.swift in Sources */,
+				24E7DDF22A6A20FC00FC4842 /* PartnerCardView.swift in Sources */,
+				24E7DDD62A6A1EA600FC4842 /* ExploreView.swift in Sources */,
+				24AC80A42A62A65C002C277D /* SignInAppleIdButton.swift in Sources */,
+				24E7DDED2A6A209100FC4842 /* NewsView.swift in Sources */,
+				24E7DDF42A6A212100FC4842 /* PartnerView.swift in Sources */,
 				24AC80A12A61A43C002C277D /* MRTPassView.swift in Sources */,
+				24E7DDDB2A6A1F4700FC4842 /* AttractionDetailView.swift in Sources */,
+				24E7DE002A6A225A00FC4842 /* ScheduleView.swift in Sources */,
+				24E7DDEB2A6A208100FC4842 /* NewsScrollView.swift in Sources */,
+				24E7DDE42A6A200A00FC4842 /* MenuDetailedView.swift in Sources */,
 				24AC80992A60FDB6002C277D /* userViewModel.swift in Sources */,
+				24E7DDE22A6A1FE900FC4842 /* ButtonMenuComponent.swift in Sources */,
+				24E7DDDD2A6A1F7200FC4842 /* AttractionScrollView.swift in Sources */,
+				24E7DDFD2A6A223300FC4842 /* PromoView.swift in Sources */,
 				24AC80772A5FB06A002C277D /* ContentView.swift in Sources */,
+				24E7DE022A6A227200FC4842 /* ScheduleCardView.swift in Sources */,
+				24E7DDF02A6A20E400FC4842 /* PartnerDetailView.swift in Sources */,
+				24E7DDE92A6A206300FC4842 /* NewsDetailView.swift in Sources */,
+				24E7DDE62A6A202400FC4842 /* MenuView.swift in Sources */,
 				24AC809F2A61A3D2002C277D /* PassViewController.swift in Sources */,
 				24AC80752A5FB06A002C277D /* MartiQRApp.swift in Sources */,
+				24E7DDD42A6A1D3E00FC4842 /* HeaderView.swift in Sources */,
+				24E7DDDF2A6A1F9B00FC4842 /* AttractionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MartiQR/MartiQR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MartiQR/Preview Content\"";
@@ -344,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MartiQR/MartiQR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MartiQR/Preview Content\"";

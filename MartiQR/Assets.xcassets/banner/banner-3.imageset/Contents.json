@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "mrtj-blu-july2023-banner-desktop.887e3f7.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

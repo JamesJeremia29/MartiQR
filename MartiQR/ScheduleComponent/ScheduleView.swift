@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct RoundedRectangleWithStroke: Shape {
     var cornerRadius: CGFloat
@@ -18,7 +19,12 @@ struct RoundedRectangleWithStroke: Shape {
     }
 }
 struct ScheduleView: View {
-    @EnvironmentObject var viewModel: UserViewModel
+    
+    @AppStorage("hashId") var hashId: String = ""
+    private var db = Firestore.firestore()
+
+    @EnvironmentObject private var viewModel: UserViewModel
+    
     var body: some View {
         VStack{
             HStack{
@@ -78,6 +84,26 @@ struct ScheduleView: View {
                     
                 }
                 
+            }
+        }
+        .task {
+            self.viewModel.fetchData()
+            if !hashId.isEmpty {
+                let documentRef = db.collection("users").document(hashId)
+                documentRef.getDocument { (document, error) in
+                    if let document = document, !document.exists {
+                        documentRef.setData([
+                            "tapIn": "",
+                            "tapOut": ""
+                        ]) { error in
+                            if let error = error {
+                                print("Error writing document: \(error)")
+                            } else {
+                                print("Document successfully written!")
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -52,15 +52,15 @@ struct SignInAppleIdButton: View {
                     print(error)
                 }
             }
-            .frame(height: 50)
+            .frame(width: 332, height: 42)
+            .cornerRadius(21)
             .padding()
-            .cornerRadius(8)
         }
     }
 }
 
-//struct SignInAppleIdButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SignInAppleIdButton()
-//    }
-//}
+struct SignInAppleIdButton_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInAppleIdButton()
+    }
+}

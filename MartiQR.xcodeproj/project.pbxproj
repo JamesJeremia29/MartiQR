@@ -46,6 +46,7 @@
 		24E7DE022A6A227200FC4842 /* ScheduleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE012A6A227200FC4842 /* ScheduleCardView.swift */; };
 		24E7DE042A6A29BF00FC4842 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE032A6A29BF00FC4842 /* BannerView.swift */; };
 		24E7DE062A6A2D2300FC4842 /* AddToWalletButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE052A6A2D2300FC4842 /* AddToWalletButton.swift */; };
+		24E7DE0A2A6A4D9500FC4842 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E7DE092A6A4D9500FC4842 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		24E7DE012A6A227200FC4842 /* ScheduleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCardView.swift; sourceTree = "<group>"; };
 		24E7DE032A6A29BF00FC4842 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		24E7DE052A6A2D2300FC4842 /* AddToWalletButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToWalletButton.swift; sourceTree = "<group>"; };
+		24E7DE092A6A4D9500FC4842 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				24AC80A02A61A43C002C277D /* MRTPassView.swift */,
 				24AC80A32A62A65C002C277D /* SignInAppleIdButton.swift */,
 				24E7DE052A6A2D2300FC4842 /* AddToWalletButton.swift */,
+				24E7DE092A6A4D9500FC4842 /* LoginView.swift */,
 			);
 			path = MartiQR;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				24E7DDE42A6A200A00FC4842 /* MenuDetailedView.swift in Sources */,
 				24AC80992A60FDB6002C277D /* userViewModel.swift in Sources */,
 				24E7DDE22A6A1FE900FC4842 /* ButtonMenuComponent.swift in Sources */,
+				24E7DE0A2A6A4D9500FC4842 /* LoginView.swift in Sources */,
 				24E7DDDD2A6A1F7200FC4842 /* AttractionScrollView.swift in Sources */,
 				24E7DDFD2A6A223300FC4842 /* PromoView.swift in Sources */,
 				24AC80772A5FB06A002C277D /* ContentView.swift in Sources */,

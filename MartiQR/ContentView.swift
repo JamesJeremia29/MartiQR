@@ -12,7 +12,6 @@ struct ContentView: View {
     @AppStorage("firstName") var firstName: String = ""
     @AppStorage("lastName") var lastName: String = ""
     @AppStorage("isSignedIn") var isSignedIn: Bool = false
-    @EnvironmentObject private var viewModel: UserViewModel
     @State private var selectedTab = 0
 
     
@@ -22,7 +21,7 @@ struct ContentView: View {
                         // Tab 1
                         NavigationView {
                             VStack {
-                                ExploreView().environmentObject(viewModel)
+                                ExploreView()
                             }
                         }
                         .tabItem {
@@ -34,7 +33,7 @@ struct ContentView: View {
                         // Tab 2
                         NavigationView {
                             VStack {
-                                MRTPassView().environmentObject(viewModel)
+                                MRTPassView().environmentObject(UserViewModel())
                             }
                         }
                         .tabItem {
@@ -57,7 +56,7 @@ struct ContentView: View {
                         .tag(2)
                     }
                 } else {
-                    SignInAppleIdButton()
+                    LoginView()
                 }
     }
     

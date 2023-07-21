@@ -14,7 +14,8 @@ class UserViewModel: ObservableObject {
     @Published var tapIn: String = ""
     @Published var tapOut: String = ""
     @AppStorage("hashId") var hashId: String = ""
-    
+    static let shared = UserViewModel()
+
     private var db = Firestore.firestore()
     private var listener: ListenerRegistration?
     

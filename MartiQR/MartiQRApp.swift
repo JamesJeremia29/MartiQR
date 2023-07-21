@@ -19,6 +19,8 @@ class appDelegate: NSObject, UIApplicationDelegate {
 struct MartiQRApp: App {
 
     @UIApplicationDelegateAdaptor(appDelegate.self) var delegate
+//    let viewModel = UserViewModel.shared
+
     var body: some Scene {
         
         WindowGroup {

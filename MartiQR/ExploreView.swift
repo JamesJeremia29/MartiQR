@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     
-    @EnvironmentObject var viewModel: UserViewModel
+//    @EnvironmentObject var viewModel: UserViewModel
 
     var body: some View {
         NavigationView {
@@ -21,7 +21,7 @@ struct ExploreView: View {
                     BannerScrollView(imageNames: imageBanner)
                     Spacer()
                     Divider()
-                    ScheduleView().environmentObject(viewModel)
+                    ScheduleView().environmentObject(UserViewModel())
                     Divider()
                     PartnerView()
                     Divider()

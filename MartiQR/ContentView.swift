@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @AppStorage("firstName") var firstName: String = ""
     @AppStorage("lastName") var lastName: String = ""
-    @AppStorage("isSignedIn") var isSignedIn: Bool = true
+    @AppStorage("isSignedIn") var isSignedIn: Bool = false
     @EnvironmentObject private var viewModel: UserViewModel
     @State private var selectedTab = 0
 

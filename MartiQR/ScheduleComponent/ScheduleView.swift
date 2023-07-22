@@ -37,54 +37,85 @@ struct ScheduleView: View {
                 Spacer()
             }
             
-            ZStack{
-                RoundedRectangleWithStroke(cornerRadius: 11, lineWidth: 1, color: Color("Primary"))
-                    .frame(width: 350, height: 50)
+
+            
+            if viewModel.tapOut.isEmpty{
+                ZStack{
+                    RoundedRectangleWithStroke(cornerRadius: 11, lineWidth: 1, color: Color("Primary"))
+                        .frame(width: 350, height: 50)
+                    
+                    HStack{
+                        Text("\(Image(systemName: "mappin")) \(viewModel.tapIn)")
+                            .fontWeight(.bold)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("Primary"))
+                            .padding(.leading, 35)
+                        Spacer()
+                    }
+                }
                 
                 HStack{
-                    Text("\(Image(systemName: "mappin")) \(viewModel.tapIn)")
-                        .fontWeight(.bold)
-                        .font(.system(size: 16))
-                        .foregroundColor(Color("Primary"))
-                        .padding(.leading, 35)
+                    Text("Heading to… ")
+                        .fontWeight(.medium)
+                        .font(.system(size: 12))
+                        .foregroundColor(.black)
+                        .padding(.leading, 20)
+                        .padding(.vertical, 10)
                     Spacer()
                 }
-            }
-            
-            HStack{
-                Text("Heading to… ")
-                    .fontWeight(.medium)
-                    .font(.system(size: 12))
-                    .foregroundColor(.black)
-                    .padding(.leading, 20)
-                    .padding(.vertical, 10)
-                Spacer()
-            }
-            
-            HStack{
-                VStack(alignment: .leading){
-                    Text("\(Image(systemName: "flag.checkered")) Lebak Bulus Grab")
-                        .fontWeight(.bold)
-                        .font(.system(size: 14))
-                        .foregroundColor(Color("Primary"))
+                
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("\(Image(systemName: "flag.checkered")) Lebak Bulus Grab")
+                            .fontWeight(.bold)
+                            .font(.system(size: 14))
+                            .foregroundColor(Color("Primary"))
+                        
+                        ScheduleCardView(arrival: "09.47", duration: "in 6 mins", color: "Secondary")
+                        ScheduleCardView(arrival: "09.55", duration: "in 14 mins", color: "Secondary")
+                        
+                    }
                     
-                    ScheduleCardView(arrival: "09.47", duration: "in 6 mins", color: "Secondary")
-                    ScheduleCardView(arrival: "09.55", duration: "in 14 mins", color: "Secondary")
+                    VStack(alignment: .leading){
+                        Text("\(Image(systemName: "flag.checkered")) Bundaran HI")
+                            .fontWeight(.bold)
+                            .font(.system(size: 14))
+                            .foregroundColor(Color("Primary"))
+                        
+                        ScheduleCardView(arrival: "09.42", duration: "in 6 mins", color: "Primary")
+                        ScheduleCardView(arrival: "09.50", duration: "in 14 mins", color: "Primary")
+                        
+                    }
                     
                 }
-                
-                VStack(alignment: .leading){
-                    Text("\(Image(systemName: "flag.checkered")) Bundaran HI")
-                        .fontWeight(.bold)
-                        .font(.system(size: 14))
-                        .foregroundColor(Color("Primary"))
+            } else {
+                ZStack{
+                    RoundedRectangleWithStroke(cornerRadius: 11, lineWidth: 1, color: Color("Primary"))
+                        .frame(width: 350, height: 50)
                     
-                    ScheduleCardView(arrival: "09.42", duration: "in 6 mins", color: "Primary")
-                    ScheduleCardView(arrival: "09.50", duration: "in 14 mins", color: "Primary")
-                    
+                    HStack{
+                        Text("\(Image(systemName: "mappin")) \(viewModel.tapOut)")
+                            .fontWeight(.bold)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("Primary"))
+                            .padding(.leading, 35)
+                        Spacer()
+                    }
                 }
-                
+                HStack{
+                    Text("Nearby places… ")
+                        .fontWeight(.medium)
+                        .font(.system(size: 12))
+                        .foregroundColor(.black)
+                        .padding(.leading, 20)
+                        .padding(.vertical, 10)
+                    Spacer()
+                }
+                NearbyPlacesView(Places: nearbyPlaces)
             }
+
+            
+
         }
         .task {
             self.viewModel.fetchData()

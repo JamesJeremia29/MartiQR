@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @AppStorage("firstName") var firstName: String = ""
     @AppStorage("lastName") var lastName: String = ""
-    @AppStorage("isSignedIn") var isSignedIn: Bool = false
+    @AppStorage("isSignedIn") var isSignedIn: Bool = true
     @State private var selectedTab = 0
 
     

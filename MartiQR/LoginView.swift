@@ -23,7 +23,7 @@ struct LoginView: View {
                                 .background(Color(.white))
                                 .frame(width: 332, height: 42)
                                 .cornerRadius(21)
-                                .padding(.bottom,20)
+                                .padding(.bottom,15)
                 Text("Password")
                     .font(.system(size: 15, weight: .medium))
                     .padding(.leading, 50)
@@ -33,9 +33,8 @@ struct LoginView: View {
                                 .background(Color(.white))
                                 .frame(width: 332, height: 42)
                                 .cornerRadius(21)
-                                .padding(.bottom,20)
+                                .padding(.bottom,25)
                 Button {
-                    
                 } label: {
                     Text("Continue")
                         .foregroundColor(.white)
@@ -45,7 +44,16 @@ struct LoginView: View {
 
                 }
                 Image("DividerOr")
+                    .padding(.vertical, 10)
                 SignInAppleIdButton()
+                HStack{
+                    Text("Don't have an account?")
+                        .foregroundColor(Color("DisabledText"))
+                    Text("Register here")
+                        .foregroundColor(Color("Primary"))
+                        .fontWeight(.bold)
+
+                }
 
             }.padding(.vertical, 150)
         }

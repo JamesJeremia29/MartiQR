@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2470182B2A6BE42F00405DAF /* NearbyPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470182A2A6BE42F00405DAF /* NearbyPlacesView.swift */; };
 		24AC80752A5FB06A002C277D /* MartiQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80742A5FB06A002C277D /* MartiQRApp.swift */; };
 		24AC80772A5FB06A002C277D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80762A5FB06A002C277D /* ContentView.swift */; };
 		24AC80792A5FB06B002C277D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AC80782A5FB06B002C277D /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2470182A2A6BE42F00405DAF /* NearbyPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesView.swift; sourceTree = "<group>"; };
 		24AC80712A5FB06A002C277D /* MartiQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartiQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AC80742A5FB06A002C277D /* MartiQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartiQRApp.swift; sourceTree = "<group>"; };
 		24AC80762A5FB06A002C277D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		24E7DDD92A6A1F1B00FC4842 /* AttractionComponent */ = {
 			isa = PBXGroup;
 			children = (
+				2470182A2A6BE42F00405DAF /* NearbyPlacesView.swift */,
 				24E7DDDA2A6A1F4700FC4842 /* AttractionDetailView.swift */,
 				24E7DDDC2A6A1F7200FC4842 /* AttractionScrollView.swift */,
 				24E7DDDE2A6A1F9B00FC4842 /* AttractionView.swift */,
@@ -313,6 +316,7 @@
 				24AC80A42A62A65C002C277D /* SignInAppleIdButton.swift in Sources */,
 				24E7DDED2A6A209100FC4842 /* NewsView.swift in Sources */,
 				24E7DDF42A6A212100FC4842 /* PartnerView.swift in Sources */,
+				2470182B2A6BE42F00405DAF /* NearbyPlacesView.swift in Sources */,
 				24AC80A12A61A43C002C277D /* MRTPassView.swift in Sources */,
 				24E7DDDB2A6A1F4700FC4842 /* AttractionDetailView.swift in Sources */,
 				24E7DE002A6A225A00FC4842 /* ScheduleView.swift in Sources */,

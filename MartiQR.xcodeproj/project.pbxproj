@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242C7EB92A6E17B800EAC1B9 /* Generic2.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = 242C7EB82A6E17B800EAC1B9 /* Generic2.pkpass */; };
+		242C7EBB2A6E194B00EAC1B9 /* Generic3.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = 242C7EBA2A6E194B00EAC1B9 /* Generic3.pkpass */; };
 		2470182B2A6BE42F00405DAF /* NearbyPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2470182A2A6BE42F00405DAF /* NearbyPlacesView.swift */; };
 		24AC80752A5FB06A002C277D /* MartiQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80742A5FB06A002C277D /* MartiQRApp.swift */; };
 		24AC80772A5FB06A002C277D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC80762A5FB06A002C277D /* ContentView.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242C7EB82A6E17B800EAC1B9 /* Generic2.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic2.pkpass; sourceTree = "<group>"; };
+		242C7EBA2A6E194B00EAC1B9 /* Generic3.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic3.pkpass; sourceTree = "<group>"; };
 		2470182A2A6BE42F00405DAF /* NearbyPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesView.swift; sourceTree = "<group>"; };
 		24AC80712A5FB06A002C277D /* MartiQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartiQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AC80742A5FB06A002C277D /* MartiQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartiQRApp.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				24E7DE032A6A29BF00FC4842 /* BannerView.swift */,
 				24E7DDD32A6A1D3E00FC4842 /* HeaderView.swift */,
 				24AC80C82A68E31A002C277D /* Generic.pkpass */,
+				242C7EB82A6E17B800EAC1B9 /* Generic2.pkpass */,
+				242C7EBA2A6E194B00EAC1B9 /* Generic3.pkpass */,
 				24AC80A22A62A2BC002C277D /* MartiQR.entitlements */,
 				24AC809C2A61007F002C277D /* GoogleService-Info.plist */,
 				24AC80742A5FB06A002C277D /* MartiQRApp.swift */,
@@ -292,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AC809D2A61007F002C277D /* GoogleService-Info.plist in Resources */,
+				242C7EBB2A6E194B00EAC1B9 /* Generic3.pkpass in Resources */,
+				242C7EB92A6E17B800EAC1B9 /* Generic2.pkpass in Resources */,
 				24AC807C2A5FB06B002C277D /* Preview Assets.xcassets in Resources */,
 				24AC80C92A68E31A002C277D /* Generic.pkpass in Resources */,
 				24AC80792A5FB06B002C277D /* Assets.xcassets in Resources */,

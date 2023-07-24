@@ -18,7 +18,7 @@ struct MRTPassView: View {
     @AppStorage("hashId") var hashId: String = ""
     @AppStorage("firstName") var firstName: String = ""
     @AppStorage("lastName") var lastName: String = ""
-    
+//    let hashName = "NathaniaWiranda"
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
     private var db = Firestore.firestore()
@@ -48,7 +48,7 @@ struct MRTPassView: View {
             HStack{
                 Image(systemName: "person.fill")
                 Text("\(firstName) \(lastName)")
-                //                Text("James Jeremia")
+//                Text("James Jeremia")
             }.padding(.all)
                 .padding(.bottom, 20)
             
@@ -74,12 +74,15 @@ struct MRTPassView: View {
         }
         .onAppear{
             if hashId.isEmpty {
-                if let savedHashId = UserDefaults.standard.string(forKey: "hashId") {
-                    hashId = savedHashId
-                } else {
-                    hashId = generateHashFromName(firstName: firstName, lastName: lastName)
-                    UserDefaults.standard.set(hashId, forKey: "hashId")
-                }
+//                hashId = generateSHA256Hash(from: hashName)
+                hashId = generateHashFromName(firstName: firstName, lastName: lastName)
+                UserDefaults.standard.set(hashId, forKey: "hashId")
+//                if let savedHashId = UserDefaults.standard.string(forKey: "hashId") {
+//                    hashId = savedHashId
+//                }
+//            else {
+//
+//                }
             }
             
         }

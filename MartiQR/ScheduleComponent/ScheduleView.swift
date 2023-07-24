@@ -118,8 +118,7 @@ struct ScheduleView: View {
 
         }
         .task {
-            self.viewModel.fetchData()
-            if !hashId.isEmpty {
+            if !hashId.isEmpty {            self.viewModel.fetchData()
                 let documentRef = db.collection("users").document(hashId)
                 documentRef.getDocument { (document, error) in
                     if let document = document, !document.exists {
